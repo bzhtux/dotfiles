@@ -26,3 +26,6 @@ w = whatchanged
 	default = current
 [credential]
 	helper = osxkeychain
+
+[includeIf "gitdir:~/workdir/src/Customers/Swisscom"]
+  path = .gitconfig_swisscom
