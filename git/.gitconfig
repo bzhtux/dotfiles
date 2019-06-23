@@ -29,4 +29,3 @@ w = whatchanged
 
 [includeIf "gitdir:~/workdir/src/Customers/Swisscom"]
   path = .gitconfig_swisscom
-
