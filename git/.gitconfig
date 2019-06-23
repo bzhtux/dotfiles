@@ -1,0 +1,28 @@
+[core]
+	hooksPath = /Users/yfoeillet/workspace/git-hooks-core
+[alias]
+lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+lola = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+st = status
+ci = commit
+br = branch
+co = checkout
+su = submodule update --init --recursive
+lpush = "!git log origin/$(git currentbranch)..HEAD"
+lpull = "!git log HEAD..origin/$(git currentbranch)"
+whatsnew = "!git diff origin/$(git currentbranch)...HEAD"
+whatscoming = "!git diff HEAD...origin/$(git currentbranch)"
+currentbranch = "!git branch | grep \"^\\*\" | cut -d \" \" -f 2"
+cam = commit -a -m
+w = whatchanged
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[user]
+	name = Yannick Foeillet
+	email = bzhtux@gmail.com
+[push]
+	default = current
+[credential]
+	helper = osxkeychain
