@@ -134,9 +134,9 @@ alias kgd='kubectl get deployments'
 alias kgs='kubectl get services'
 
 # Source Extra File for custom and hidden alias or other job stuff ;-)
-if [ -f "~/.zsh-extras" ];
+if [ -f "$HOME/.zsh-extras" ];
 then
-  . '~/.zsh-extras'
+  . "$HOME/.zsh-extras"
 fi
 
 # direnv
@@ -171,4 +171,21 @@ fi
 if [ -f "/usr/local/share/zsh/site-functions/_kubectl" ];
 then
 	. "/usr/local/share/zsh/site-functions/_kubectl"
+fi
+
+# BITWARDEN
+if ! bw list folders >/dev/null 2>&1; then
+    if ! bw login --check >/dev/null; then
+        BW_SESSION=$(bw login --raw)
+        export BW_SESSION
+    else
+        BW_SESSION=$(bw unlock --raw)
+        export BW_SESSION
+    fi
+fi
+bw sync
+
+if [ -f "/Users/yfoeillet/.fzf.zsh" ]
+then
+  . "/Users/yfoeillet/.fzf.zsh"
 fi
