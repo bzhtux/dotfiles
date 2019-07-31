@@ -185,10 +185,10 @@ if ! bw list folders >/dev/null 2>&1; then
 fi
 bw sync
 
-if [ -f "/Users/yfoeillet/.fzf.zsh" ]
-then
-  . "/Users/yfoeillet/.fzf.zsh"
-fi
+# if [ -f "/Users/yfoeillet/.fzf.zsh" ]
+# then
+#   . "/Users/yfoeillet/.fzf.zsh"
+# fi
 
 #thefuck
 eval $(thefuck --alias)
