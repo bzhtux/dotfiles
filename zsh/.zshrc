@@ -189,3 +189,6 @@ if [ -f "/Users/yfoeillet/.fzf.zsh" ]
 then
   . "/Users/yfoeillet/.fzf.zsh"
 fi
+
+#thefuck
+eval $(thefuck --alias)
