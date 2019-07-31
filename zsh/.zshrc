@@ -89,7 +89,6 @@ export LC_ALL=en_US.UTF-8
 ssh-add -K /Users/yfoeillet/.ssh/pivotal_rsa
 ssh-add -K /Users/yfoeillet/.ssh/tf_rsa
 ssh-add -K /Users/yfoeillet/.ssh/pcfs_pks_training
-ssh-add -K /Users/yfoeillet/.ssh/id_rsa_swisscom
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 source $ZSH/oh-my-zsh.sh
