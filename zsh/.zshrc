@@ -191,4 +191,3 @@ bw sync
 
 #thefuck
 eval $(thefuck --alias)
-
