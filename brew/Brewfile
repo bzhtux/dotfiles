@@ -19,7 +19,7 @@ brew "git-crypt"
 brew "git-lfs"
 brew "htop"
 brew "hugo"
-brew "hyperkit", link: false
+brew "hyperkit"
 brew "ipcalc"
 brew "jq"
 brew "kubernetes-cli"
