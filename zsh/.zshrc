@@ -172,6 +172,12 @@ then
 	. "/usr/local/share/zsh/site-functions/_kubectl"
 fi
 
+# CURL
+if [ -f "/usr/local/opt/curl/share/zsh/site-functions" ];
+then
+  . "/usr/local/opt/curl/share/zsh/site-functions"
+fi
+
 # BITWARDEN
 if ! bw list folders >/dev/null 2>&1; then
     if ! bw login --check >/dev/null; then
