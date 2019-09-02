@@ -68,8 +68,10 @@ ZSH_THEME="apple"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  osx
+  kubectl
   brew
+  minikube
+  osx
   ssh-agent
   tmux
   z
