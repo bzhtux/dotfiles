@@ -27,10 +27,15 @@ w = whatchanged
 [credential]
 	helper = osxkeychain
 
-[includeIf "gitdir:~/workdir/src/Customers/Swisscom"]
-  path = .gitconfig_swisscom
+#[includeIf "gitdir:~/workdir/src/Customers/Swisscom/src/caas-ci"]
+#  path = .gitconfig_swisscom
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[http]
+[http "https://gitdata-1.mgmtsccloud.net"]
+  proxy = socks5://localhost:5004
