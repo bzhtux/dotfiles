@@ -127,12 +127,25 @@ alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 alias gau='git add -u'
-alias gc='git commit -m'
+alias gc='git commit'
 alias gp='git push'
 alias k='kubectl'
 alias kgp='kubectl get pods'
 alias kgd='kubectl get deployments'
 alias kgs='kubectl get services'
+
+# CUSTOM FUNCTIONS
+function bw_login {
+  if ! bw login --check >/dev/null; then
+    BW_SESSION=$(bw login --raw)
+    export BW_SESSION
+  else
+    BW_SESSION=$(bw unlock --raw)
+    export BW_SESSION
+  fi
+  bw sync
+} 
+
 
 # Source Extra File for custom and hidden alias or other job stuff ;-)
 if [ -f "$HOME/.zsh-extras" ];
@@ -199,3 +212,12 @@ bw sync
 
 #thefuck
 eval $(thefuck --alias)
+
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# added by travis gem
+[ -f /Users/yfoeillet/.travis/travis.sh ] && source /Users/yfoeillet/.travis/travis.sh
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
