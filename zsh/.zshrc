@@ -8,6 +8,10 @@ export GOPATH=$(go env GOPATH)
 export PATH="$PATH:$GOPATH/bin:$HOME/bin"
 export PATH="/usr/local/share/dotnet:/usr/local/opt/mysql-client/bin:$PATH"
 
+
+# GOSS and DGOSS
+export GOSS_USE_ALPHA=1
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -90,7 +94,7 @@ export LC_ALL=en_US.UTF-8
 
 ssh-add -K /Users/yfoeillet/.ssh/pivotal_rsa
 ssh-add -K /Users/yfoeillet/.ssh/tf_rsa
-ssh-add -K /Users/yfoeillet/.ssh/pcfs_pks_training
+# ssh-add -K /Users/yfoeillet/.ssh/pcfs_pks_training
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 source $ZSH/oh-my-zsh.sh
@@ -194,27 +198,29 @@ then
 fi
 
 # BITWARDEN
-if ! bw list folders >/dev/null 2>&1; then
-    if ! bw login --check >/dev/null; then
-        BW_SESSION=$(bw login --raw)
-        export BW_SESSION
-    else
-        BW_SESSION=$(bw unlock --raw)
-        export BW_SESSION
-    fi
-fi
-bw sync
+# if ! bw list folders >/dev/null 2>&1; then
+#     if ! bw login --check >/dev/null; then
+#         BW_SESSION=$(bw login --raw)
+#         export BW_SESSION
+#     else
+#         BW_SESSION=$(bw unlock --raw)
+#         export BW_SESSION
+#     fi
+# fi
+# bw sync
 
 # if [ -f "/Users/yfoeillet/.fzf.zsh" ]
 # then
 #   . "/Users/yfoeillet/.fzf.zsh"
 # fi
 
-#thefuck
-eval $(thefuck --alias)
+##thefuck
+#eval $(thefuck --alias)
+#
+## You can use whatever you want as an alias, like for Mondays:
+#eval $(thefuck --alias FUCK)
 
-# You can use whatever you want as an alias, like for Mondays:
-eval $(thefuck --alias FUCK)
+compdef _ansible ansible-playbook
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
