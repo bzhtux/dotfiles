@@ -1,5 +1,5 @@
 [core]
-	hooksPath = /Users/yfoeillet/workspace/git-hooks-core
+  # hooksPath = /Users/yfoeillet/workspace/git-hooks-core
 [alias]
 lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 lola = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
@@ -27,15 +27,16 @@ w = whatchanged
 [credential]
 	helper = osxkeychain
 
-#[includeIf "gitdir:~/workdir/src/Customers/Swisscom/src/caas-ci"]
-#  path = .gitconfig_swisscom
+[includeIf "gitdir:/Users/yfoeillet/workdir/src/gitlab.eng.vmware.com/**"]
+  path = /Users/yfoeillet/.gitconfig_vmware
 
+[http]
+[http "https://gitdata-1.mgmtsccloud.net"]
+  proxy = socks5://localhost:5004
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-[http]
-[http "https://gitdata-1.mgmtsccloud.net"]
-  proxy = socks5://localhost:5004
+[init]
+	defaultBranch = master
