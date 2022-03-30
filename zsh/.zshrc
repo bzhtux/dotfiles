@@ -92,9 +92,9 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-ssh-add -K /Users/yfoeillet/.ssh/pivotal_rsa
-ssh-add -K /Users/yfoeillet/.ssh/tf_rsa
-# ssh-add -K /Users/yfoeillet/.ssh/pcfs_pks_training
+ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/pivotal_rsa
+ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/tf_rsa
+# ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/pcfs_pks_training
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 source $ZSH/oh-my-zsh.sh
@@ -137,6 +137,7 @@ alias k='kubectl'
 alias kgp='kubectl get pods'
 alias kgd='kubectl get deployments'
 alias kgs='kubectl get services'
+alias customers='cd /Users/yfoeillet/workdir/src/Customers'
 
 # CUSTOM FUNCTIONS
 function bw_login {
@@ -227,3 +228,14 @@ compdef _ansible ansible-playbook
 # added by travis gem
 [ -f /Users/yfoeillet/.travis/travis.sh ] && source /Users/yfoeillet/.travis/travis.sh
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/yfoeillet/.sdkman"
+[[ -s "/Users/yfoeillet/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/yfoeillet/.sdkman/bin/sdkman-init.sh"
+
+# TANZU COMPLETION
+source <(tanzu completion zsh)
+
+# K8S Context in PS1
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1) '$PS1
