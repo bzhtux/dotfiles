@@ -62,7 +62,7 @@ brew "openjdk"
 brew "maven"
 brew "md5sha1sum"
 brew "mdp"
-brew "minikube", link: false
+brew "minikube"
 brew "minio-mc"
 brew "mtr"
 brew "mysql-client"
