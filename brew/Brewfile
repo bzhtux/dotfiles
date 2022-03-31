@@ -109,6 +109,7 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "vmware-tanzu/tanzu/tanzu-community-edition"
 cask "dotnet-sdk"
 cask "dotnet-sdk3-1-400"
+cask "fig"
 cask "google-cloud-sdk"
 cask "java"
 cask "minikube"
