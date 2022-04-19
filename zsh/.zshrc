@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -92,9 +94,9 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/id_ed25519
 ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/pivotal_rsa
 ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/tf_rsa
-# ssh-add --apple-use-keychain /Users/yfoeillet/.ssh/pcfs_pks_training
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 source $ZSH/oh-my-zsh.sh
@@ -239,3 +241,6 @@ source <(tanzu completion zsh)
 # K8S Context in PS1
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1) '$PS1
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
