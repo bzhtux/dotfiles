@@ -26,7 +26,7 @@ w = whatchanged
 [includeIf "gitdir:~/go/src/github.com/bzhtux/"]
 	path = ~/.gitconfig_personal
 
-[includeIf "gitdir:~/Documents/src/github.com/bzhtux/**"]
+[includeIf "gitdir:~/src/github.com/bzhtux/**"]
 	path = ~/.gitconfig_personal
 
 [includeIf "gitdir:~/workdir/src/github.com/vmware-tanzu/"]
