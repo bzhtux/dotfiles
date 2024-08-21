@@ -1,0 +1,6 @@
+[user]
+  name = Yannick Foeillet
+  email = yfoeillet@vmware.com
+  signingkey = 6E0B3ECC7EE63C80
+[commit]
+  gpgsign = true

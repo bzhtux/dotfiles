@@ -1,0 +1,77 @@
+[alias]
+lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+lola = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+st = status
+ci = commit
+br = branch
+co = checkout
+su = submodule update --init --recursive
+whatsnew = "!git diff origin/$(git currentbranch)...HEAD"
+whatscoming = "!git diff HEAD...origin/$(git currentbranch)"
+currentbranch = "!git branch | grep \"^\\*\" | cut -d \" \" -f 2"
+w = whatchanged
+
+# [filter "media"]
+# 	clean = git media clean %f
+# 	smudge = git media smudge %f
+# 	required = true
+
+# [include]
+# 	path = /Users/yfoeillet/go/src/github.com/bzhtux/.gitconfig_personal
+# 	path = .gitconfig_personal
+
+[includeIf "gitdir:~/go/src/github.com/bzhtux/**"]
+  path = ~/.gitconfig_personal
+
+[includeIf "gitdir:~/go/src/github.com/bzhtux/"]
+	path = ~/.gitconfig_personal
+
+[includeIf "gitdir:~/Documents/src/github.com/bzhtux/**"]
+	path = ~/.gitconfig_personal
+
+[includeIf "gitdir:~/workdir/src/github.com/vmware-tanzu/"]
+	path = ~/.gitconfig_vmware
+
+[includeIf "gitdir:~/Documents/src/github.com/vmware-tanzu-labs/**"]
+	path = ~/.gitconfig_vmware
+
+[includeIf "gitdir:~/workdir/src/github.com/vmware-tanzu/tanzu-application-platform-reference-service-packages/"]
+	path = ~/.gitconfig_vmware
+
+[includeIf "gitdir:~/workdir/src/gitlab.eng.vmware.com/"]
+	path = ~/.gitconfig_vmware
+
+
+[push]
+	default = current
+
+[credential]
+	helper = osxkeychain
+
+# [filter "lfs"]
+# 	clean = git-lfs clean -- %f
+#   	smudge = git-lfs smudge -- %f
+# 	process = git-lfs filter-process
+# 	required = true
+
+[init]
+	defaultBranch = main
+
+# [pager]
+#   branch = false
+#   tag = false
+
+#[commit]
+#	gpgsign = true
+#[user]
+#	name = Yannick
+
+# [user]
+# 	name = Yannick
+# 	email = yannick.foeillet@gmail.com
+# 	# signingkey = 7F522AF067993B24
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

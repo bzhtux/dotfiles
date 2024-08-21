@@ -1,0 +1,7 @@
+[user]  
+	name = Yannick Foeillet
+	email = bzhtux@gmail.com
+	signingkey = 7F522AF067993B24
+
+[commit]
+	gpgsign = true

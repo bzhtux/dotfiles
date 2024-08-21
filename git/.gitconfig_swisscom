@@ -1,0 +1,6 @@
+[user]
+   name = Yannick Foeillet
+   email = yfoeillet@vmware.com
+
+[credential]
+	helper = osxkeychain
