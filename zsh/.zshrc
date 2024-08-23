@@ -12,6 +12,7 @@ LANG=en_US.UTF-8
 
 # Completions
 source <(devbox completion zsh)
+source <(fzf --zsh)
 #source <(docker completion zsh)
 #source <(kubectl completion zsh)
 
@@ -44,12 +45,15 @@ zinit light-mode for \
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-syntax-highlighting
+zinit light kalsowerus/zsh-bitwarden
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 zstyle ':completion:*' menu yes select
 
+
 # Aliases
-alias ls='eza --long --all --no-permissions --no-filesize --no-user --no-time --git'
+alias ls='eza --long --no-permissions --no-filesize --no-user --no-time --git'
+alias la='eza --long --all --git'
 alias lst='eza --long --all --no-permissions --no-filesize --no-user --git --sort modified'
 alias ltr='eza --long --all --no-filesize --no-user --git --sort new'
 alias fzfp='fzf --preview \"bat --style numbers --color always {}\"'
