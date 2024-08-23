@@ -61,3 +61,6 @@ alias cat='bat --paging never --theme DarkNeon --style plain'
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# GNUPG
+export GPG_TTY=$(tty)
