@@ -60,7 +60,10 @@ alias fzfp='fzf --preview \"bat --style numbers --color always {}\"'
 alias cat='bat --paging never --theme DarkNeon --style plain'
 
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin/:$PATH"
 
 # GNUPG
 export GPG_TTY=$(tty)
+
+# Direnv
+eval "$(direnv hook zsh)"

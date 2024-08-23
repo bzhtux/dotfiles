@@ -2,6 +2,8 @@ tap "homebrew/bundle"
 tap "kcl-lang/tap"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Modern, maintained replacement for ls
 brew "eza"
 # Command-line fuzzy finder written in Go
@@ -32,6 +34,7 @@ cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
+vscode "github.vscode-github-actions"
 vscode "golang.go"
 vscode "ms-vscode.makefile-tools"
 vscode "redhat.vscode-yaml"
