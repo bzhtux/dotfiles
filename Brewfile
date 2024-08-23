@@ -4,6 +4,8 @@ tap "kcl-lang/tap"
 brew "bat"
 # Modern, maintained replacement for ls
 brew "eza"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -12,6 +14,8 @@ brew "go"
 brew "golangci-lint"
 # Tool for glamorous shell scripts
 brew "gum"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Cross-shell prompt for astronauts
@@ -20,6 +24,8 @@ brew "starship"
 brew "stow"
 # Secrets management tool for developers
 brew "teller"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # A constraint-based record & functional language mainly used in configuration and policy scenarios.
 brew "kcl-lang/tap/kcl-lsp"
 cask "font-fira-code"
