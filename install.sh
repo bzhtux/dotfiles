@@ -13,3 +13,6 @@ stow zsh -t $HOME
 
 # Git Config
 stow git -t $HOME
+
+# GNUPG Config
+stow gnupg -t $HOME/.gnupg/
