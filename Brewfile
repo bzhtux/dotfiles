@@ -18,6 +18,8 @@ brew "golangci-lint"
 brew "gum"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Port scanning utility for large networks
+brew "nmap"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Cross-shell prompt for astronauts
@@ -28,10 +30,13 @@ brew "stow"
 brew "teller"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Compress/expand executable files
+brew "upx"
 # A constraint-based record & functional language mainly used in configuration and policy scenarios.
 brew "kcl-lang/tap/kcl-lsp"
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
+vscode "codeium.codeium"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "github.vscode-github-actions"
