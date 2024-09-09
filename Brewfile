@@ -32,6 +32,8 @@ brew "teller"
 brew "tree"
 # Compress/expand executable files
 brew "upx"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
 # A constraint-based record & functional language mainly used in configuration and policy scenarios.
 brew "kcl-lang/tap/kcl-lsp"
 cask "font-fira-code"
