@@ -15,4 +15,19 @@ stow zsh -t $HOME
 stow git -t $HOME
 
 # GNUPG Config
+if [ ! -d "$HOME/.gnupg" ]; then
+    mkdir $HOME/.gnupg
+fi
 stow gnupg -t $HOME/.gnupg/
+
+# Nix Config
+if [ ! -d "$HOME/.config/nixpkgs" ]; then
+    mkdir -p $HOME/.config/nixpkgs
+fi
+stow nix -t $HOME/.config/nixpkgs/
+
+# Zellij Config
+if [ ! -d "$HOME/.config/zellij" ]; then
+    mkdir -p $HOME/.config/zellij
+fi
+stow zellij -t $HOME/.config/zellij/

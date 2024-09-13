@@ -1,0 +1,3 @@
+{
+  allowAliases = false;
+}
